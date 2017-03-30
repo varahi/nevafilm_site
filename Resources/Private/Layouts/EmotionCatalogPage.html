@@ -1,0 +1,20 @@
+<f:layout name="EmotionCatalogPage" />
+<f:render partial="Header" arguments="{_all}" />	
+    <main>
+      <div class="container-fluid-default clearfix">
+        <div class="{page.picture_class}">
+          <div class="container">
+          	<f:render section="Left" />	
+          </div>
+        </div>
+      </div>
+      <f:cObject typoscriptObjectPath="lib.emotionCatalogMenu" />
+      <div class="container">
+        <div class="flex-wrapper">
+          <div class="flex-item-content-big">
+          	<f:render section="Main" />
+          </div>
+        </div>
+      </div>
+    </main>
+<f:render partial="Footer" arguments="{_all}" />	

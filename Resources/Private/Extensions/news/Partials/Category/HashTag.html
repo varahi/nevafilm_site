@@ -1,0 +1,7 @@
+		<f:if condition="{newsItem.firstCategory}">
+			<f:link.page pageUid="{newsItem.firstCategory.shortcut}">
+				<span class="hashtag {newsItem.firstCategory.description}">
+					#{newsItem.firstCategory.title}
+				</span>
+			</f:link.page>
+		</f:if>	

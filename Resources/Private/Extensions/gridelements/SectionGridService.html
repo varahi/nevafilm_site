@@ -1,0 +1,19 @@
+<section class="studios-service-section">
+    <header id="{data.flexform_class}">{data.tx_gridelements_view_column_1->f:format.raw()}</header>
+      <div class="{data.flexform_class}"></div>
+ 		<div class="container">
+      <div class="flex-wrapper">
+      	<f:if condition="{data.flexform_class} == 'dubbing-wrapper' ">
+      		<f:then>
+        		<div class="flex-item">
+							<f:format.raw>{data.tx_gridelements_view_column_0->f:format.raw()}</f:format.raw>
+      			</div>       		
+      		</f:then>
+      		<f:else>
+      			<f:format.raw>{data.tx_gridelements_view_column_0->f:format.raw()}</f:format.raw>
+      		</f:else>
+      	</f:if>
+      	<f:cObject typoscriptObjectPath="lib.studiosContacts" />      
+    </div>
+	</div>
+</section>

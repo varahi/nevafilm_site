@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/MainList.html
+-->
+
+<div class="main-news__preview_item">
+	<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+		<p class="main-news__preview_info"><span itemprop="headline">{newsItem.title}</span></p>
+		<span class="date"><f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date></span>
+	</n:link>
+	<f:render partial="Category/HashTag" arguments="{_all}"/>	
+</div>
+
+</html>

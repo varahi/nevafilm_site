@@ -1,0 +1,75 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/MainFirst.html
+-->
+<div class="main-news__first">
+	<n:excludeDisplayedNews newsItem="{newsItem}"/>
+	<!-- header -->
+	
+	<!-- <f:for each="{newsItem.categories}" as="category" key="number" iteration="itemIteration">
+		<f:if condition="{itemIteration.isFirst}">
+			<f:then>	
+			{category.singlePid}
+			</f:then>
+			<f:else></f:else>
+			</f:if>
+	</f:for> -->
+	
+<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+
+	<f:if condition="{newsItem.falMedia}">
+		<!-- fal media preview element -->
+		<div class="main-news__first_img">
+			<f:if condition="{newsItem.falMediaPreviews}">
+				<f:then>
+						<f:alias map="{mediaElement: '{newsItem.falMediaPreviews.0}'}">
+							<f:if condition="{mediaElement.originalResource.type} == 2">
+								<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="{settings.list.media.image.width}" height="{settings.list.media.image.height}"/>
+							</f:if>
+							<f:if condition="{mediaElement.originalResource.type} == 4">
+								<f:render partial="Detail/FalMediaVideo" arguments="{mediaElement: mediaElement}"/>
+							</f:if>
+							<f:if condition="{mediaElement.originalResource.type} == 5">
+								<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="{settings.list.media.image.width}" height="{settings.list.media.image.height}"/>
+							</f:if>
+						</f:alias>
+				</f:then>
+				<f:else>
+					<f:if condition="{settings.displayDummyIfNoMedia}">
+						<span class="no-media-element">
+							<f:image src="{settings.list.media.dummyImage}" title="" alt="" width="{settings.list.media.image.width}" height="{settings.list.media.image.height}"/>
+						</span>
+					</f:if>
+				</f:else>
+			</f:if>
+		</div>
+	</f:if>
+		
+	<div class="main-news__first_content">
+		<h3><span itemprop="headline">{newsItem.title}</span></h3>
+		<f:if condition="{newsItem.teaser}">
+			<f:then>
+				<div itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+			</f:then>
+			<f:else>
+				<div itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+			</f:else>
+		</f:if>
+  </div>
+</n:link>
+
+	<div class="main-news__first_links">
+  	<span class="main-news__line"></span>
+		<span class="date"><f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date></span>
+		<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />		
+		<f:render partial="Category/HashTag" arguments="{_all}"/>	
+	</div>
+	<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" class="main-news__more">
+		{f:translate(key: 'news.more', extensionName: 'nevafilm_site')}
+	</n:link>
+	
+</div>
+</html>

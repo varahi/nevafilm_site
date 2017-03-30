@@ -1,0 +1,40 @@
+{namespace dce=ArminVieweg\Dce\ViewHelpers}
+<f:layout name="Default" />
+
+<f:section name="main">
+<f:if condition="{field.link}">
+  <f:then>
+		<f:link.page pageUid="{field.link}">
+			<f:if condition="{field.title}">
+				<h4>{field.title}</h4>
+			</f:if>
+			<f:if condition="{field.html}">
+				<f:format.raw>{field.html}</f:format.raw>
+			</f:if>
+			<f:if condition="{field.image}">
+				<f:for each="{dce:fal(field:'image', contentObject:contentObject)}" as="fileReference" iteration="iterator">
+    			<f:if condition="{iterator.isFirst}">
+        		<f:image src="{fileReference.uid}" alt="" treatIdAsReference="1" />
+    			</f:if>
+				</f:for>			
+			</f:if>
+		</f:link.page>
+  </f:then>
+  <f:else>
+			<f:if condition="{field.title}">
+				<h4>{field.title}</h4>
+			</f:if>
+			<f:if condition="{field.html}">
+				<f:format.raw>{field.html}</f:format.raw>
+			</f:if>
+			<f:if condition="{field.image}">
+				<f:for each="{dce:fal(field:'image', contentObject:contentObject)}" as="fileReference" iteration="iterator">
+    			<f:if condition="{iterator.isFirst}">
+        		<f:image src="{fileReference.uid}" alt="" treatIdAsReference="1" />
+    			</f:if>
+				</f:for>			
+			</f:if>
+  </f:else>
+</f:if>
+
+</f:section>

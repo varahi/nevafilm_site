@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+  <ROOT type="array">
+    <type>array</type>
+    <el type="array">
+      <!-- <shadow>
+        <TCEforms type="array">
+          <label>Schatten anzeigen</label>
+          <config>
+            <type>check</type>
+          </config>
+        </TCEforms>
+    </shadow> -->
+      <class>
+        <TCEforms>
+          <label>Выберите класс</label>
+          <config>
+            <type>select</type>
+            <items type="array">
+              <numIndex index="0" type="array">
+                <numIndex index="0">dubbing-wrapper</numIndex>
+                <numIndex index="1">dubbing-wrapper</numIndex>
+              </numIndex>
+              <numIndex index="1" type="array">
+                <numIndex index="0">postproduction-wrapper</numIndex>
+                <numIndex index="1">postproduction-wrapper</numIndex>
+              </numIndex>
+              <numIndex index="2" type="array">
+                <numIndex index="0">digital-wrapper</numIndex>
+                <numIndex index="1">digital-wrapper</numIndex>
+              </numIndex>  
+              <numIndex index="3" type="array">
+                <numIndex index="0">tiflo-wrapper</numIndex>
+                <numIndex index="1">tiflo-wrapper</numIndex>
+              </numIndex>                            
+            </items>
+            <maxitems>1</maxitems>
+            <size>1</size>
+          </config>
+        </TCEforms>
+      </class>
+    </el>
+  </ROOT>
+</T3DataStructure>

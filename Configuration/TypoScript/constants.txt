@@ -1,0 +1,65 @@
+plugin.tx_nevafilmsite.view {
+	templateRootPaths.0 = EXT:nevafilm_site/Resources/Private/Templates/
+	partialRootPaths.0 = EXT:nevafilm_site/Resources/Private/Partials/
+	layoutRootPaths.0 = EXT:nevafilm_site/Resources/Private/Layouts/
+}
+
+
+template_path = typo3conf/ext/nevafilm_site
+
+
+# Magnific popup
+plugin.tx_jhmagnificpopup.type.ajax {
+	ajax.cursor = 0
+	closeOnBgClick = 0
+	closeBtnInside = 1
+	disableOn = 1
+	showCloseBtn = 1
+	alignTop = 0
+	modal = 0
+}
+plugin.tx_jhmagnificpopup.magnificpopup.support.tx_news = 1
+
+styles.content.imgtext.maxW = 1200
+styles.content.imgtext.maxWInText = 0
+styles.content.imgtext.linkWrap.width = 800
+styles.content.loginform.pid = 0
+
+# News
+plugin.tx_news.settings.sitemap.startingpoint = 0
+plugin.tx_news.settings.sitemap.detailPid = 0
+plugin.tx_news.view.templateRootPath = EXT:nevafilm_site/Resources/Private/Extensions/news/Templates/
+plugin.tx_news.view.layoutRootPath = EXT:nevafilm_site/Resources/Private/Extensions/news/Layouts/
+plugin.tx_news.view.partialRootPath = EXT:nevafilm_site/Resources/Private/Extensions/news/Partials/
+plugin.tx_news.settings.cssFile = EXT:nevafilm_site/Resources/Public/Styles/news.css
+
+#Powermail
+plugin.tx_powermail.view.templateRootPath = EXT:nevafilm_site/Resources/Private/Extensions/powermail/Templates/
+plugin.tx_powermail.view.partialRootPath = EXT:nevafilm_site/Resources/Private/Extensions/powermail/Partials/
+plugin.tx_powermail.view.layoutRootPath = EXT:nevafilm_site/Resources/Private/Extensions/powermail/Layouts/
+
+#plugin.tx_powermail.settings.captcha.image = typo3conf/ext/nevafilm_site/Resources/Public/img/captcha_bg.png
+plugin.tx_powermail.settings.captcha.textSize = 22
+plugin.tx_powermail.settings.captcha.textColor = #000000
+plugin.tx_powermail.settings.captcha.textAngle = -2,2
+plugin.tx_powermail.settings.captcha.distanceHor = 5,10
+plugin.tx_powermail.settings.captcha.distanceVer = 28,29
+
+
+plugin.tx_powermail.settings.receiver.overwrite.email = varahi@yandex.ru, 3dway@mail.ru
+plugin.tx_powermail.settings.receiver.default.senderEmail = noreply@nevafilm.com
+plugin.tx_powermail.settings.receiver.overwrite.senderEmail = noreply@nevafilm.com
+
+#plugin.tx_powermail.settings.receiver.overwrite.name = Webuser
+#plugin.tx_powermail.settings.receiver.overwrite.senderName = Webuser
+#plugin.tx_powermail.settings.receiver.overwrite.subject = Message from site
+#plugin.tx_powermail.settings.sender.overwrite.email = noreply@servicelux.info
+#plugin.tx_powermail.settings.sender.overwrite.name = Webuser
+#plugin.tx_powermail.settings.sender.overwrite.senderName = Webuser
+#plugin.tx_powermail.settings.sender.overwrite.senderEmail = noreply@servicelux.info
+
+plugin.tx_powermail.settings.main.pid = 120
+plugin.tx_powermail.settings.main.confirmation = 0
+plugin.tx_powermail.settings.main.optin = 0
+plugin.tx_powermail.settings.main.moresteps = 0
+plugin.tx_powermail.settings.misc.ajaxSubmit = 0

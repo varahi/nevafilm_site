@@ -1,0 +1,20 @@
+{namespace dce=ArminVieweg\Dce\ViewHelpers}
+<f:layout name="Default" />
+<f:section name="main">
+  
+<div class="container clearfix">
+	<div class="row">
+  	<div class="studios-service_nav container clearfix">  
+			<f:for each="{field.container}" as="container">
+				<div class="item-nav-1">
+			 		<a href="{page.alias}/#{container.link}">
+ 						<h2 class="item-nav-1_title">{container.title}</h2>	
+ 						<f:format.raw>{container.html}</f:format.raw>
+  				</a>
+  			</div>	
+			</f:for>  
+  	</div>
+  </div>
+</div>  	
+  
+</f:section>

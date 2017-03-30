@@ -1,0 +1,38 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+   
+	<v:page.menu entryLevel="0" useShortcutUid="1" useShortcutTarget="1" useShortcutData="1" excludePages="">		
+			<ul class="main-menu">
+				<f:for each="{menu}" as="menuItem">				
+					<f:if condition="{menuItem.hasSubPages}">
+						<f:then>							
+							<li class="{menuItem.class}">
+								<a class="__main-links" href="{menuItem.link}">{menuItem.linktext}</a>
+								<v:page.menu pageUid="{menuItem.uid}" >
+									<ul class="sub-menu">
+										<f:for each="{menu}" as="subItem" key="number" iteration="iteration">																															
+											<f:if condition="{iteration.isLast}">
+												<f:then>
+													<li class="{subItem.class}">
+														<a href="{subItem.link}"><b>{subItem.linktext}</b></a>
+													</li>													
+												</f:then>
+												<f:else>
+													<li class="{subItem.class}">
+														<a href="{subItem.link}">{subItem.linktext}</a>
+													</li>												
+												</f:else>
+											</f:if>											
+										</f:for>
+									</ul>
+								</v:page.menu>
+							</li>							
+						</f:then>
+						<f:else>
+							<li class="item{f:if(condition: iteration.isLast, then: '__last')} {menuItem.class}">
+								<a href="{menuItem.link}" class="{menuItem.class}">{menuItem.linktext}</a>
+							</li>
+						</f:else>
+					</f:if>
+				</f:for>
+			</ul>		
+	</v:page.menu>   

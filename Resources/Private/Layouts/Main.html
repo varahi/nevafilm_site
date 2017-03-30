@@ -1,0 +1,13 @@
+<f:layout name="Main" />
+
+<f:render partial="Header" arguments="{_all}" />	
+	<main class="container-fluid clearfix">            
+		<f:render section="Left" />     			
+			<section class="main-news">
+				<div class="main-news__content">
+					<f:render section="Right" />		
+				</div>
+			</section>        
+    <f:render section="Main" />     
+  </main>
+<f:render partial="Footer" arguments="{_all}" />	

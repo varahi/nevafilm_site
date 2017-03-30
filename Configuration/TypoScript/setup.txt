@@ -1,0 +1,28 @@
+plugin.tx_nevafilmsite {
+	view {
+		templateRootPaths.0 = {$plugin.tx_nevafilmsite.view.templateRootPaths.0}
+		partialRootPaths.0 = {$plugin.tx_nevafilmsite.view.partialRootPaths.0}
+		layoutRootPaths.0 = {$plugin.tx_nevafilmsite.view.layoutRootPaths.0}
+	}
+	#By default the following settings only will have relevance if you have fluidcontent_core extension loaded
+	settings{
+		container {
+			types {
+				default = div
+				Example = div
+			}
+		}
+	}
+}
+
+lib.fluidContent.templateRootPaths.10 = typo3conf/ext/nevafilm_site/Resources/Private/Extensions/fluid_styled_content/Templates/
+lib.fluidContent.partialRootPaths.10 = typo3conf/ext/nevafilm_site/Resources/Private/Extensions/fluid_styled_content/Partials/
+lib.fluidContent.layoutRootPaths.10 = typo3conf/ext/nevafilm_site/Resources/Private/Extensions/fluid_styled_content/Layouts/
+
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/nevafilm_site/Configuration/TypoScript/system/config.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/nevafilm_site/Configuration/TypoScript/system/resources.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/nevafilm_site/Configuration/TypoScript/system/libs.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/nevafilm_site/Configuration/TypoScript/system/gridelements.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/nevafilm_site/Configuration/TypoScript/system/news.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/nevafilm_site/Configuration/TypoScript/system/navigation.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/nevafilm_site/Configuration/TypoScript/system/breadcrumb.ts">

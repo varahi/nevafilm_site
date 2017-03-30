@@ -1,0 +1,26 @@
+<f:layout name="RightColPage" />
+
+<f:render partial="Header" arguments="{_all}" />	
+
+    <main class="container">
+      <div class="row">
+        <f:render section="Main" />	
+        <f:cObject typoscriptObjectPath="lib.breadcrumb" />       
+        <div class="page-news">
+          <div class="flex-wrapper">
+            <f:render section="Left" />
+            <div class="flex-item-four">
+            	<f:if condition="{page.hide_departament_news} == 1">
+            		<f:then></f:then>
+            		<f:else>
+            			<f:cObject typoscriptObjectPath="lib.departamentsNews" />
+            		</f:else>
+            	</f:if>
+            	<f:render section="Right" />	
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+<f:render partial="Footer" arguments="{_all}" />	

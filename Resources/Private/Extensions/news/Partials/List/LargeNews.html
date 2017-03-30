@@ -1,0 +1,57 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/LargeNews.html
+-->
+
+
+	<f:if condition="{newsItem.falMedia}">
+		<!-- fal media preview element -->
+			<f:if condition="{newsItem.falMediaPreviews}">
+				<f:then>
+					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+						<f:alias map="{mediaElement: '{newsItem.falMediaPreviews.0}'}">
+							<f:if condition="{mediaElement.originalResource.type} == 2">
+								<f:image class="news-content__large-img" image="{mediaElement}" title="{mediaElement.originalResource.title}" 
+								alt="{mediaElement.originalResource.alternative}" 
+								width="{settings.large.media.image.width}" height="{settings.large.media.image.height}"/>
+							</f:if>
+							<f:if condition="{mediaElement.originalResource.type} == 4">
+								<f:render partial="Detail/FalMediaVideo" arguments="{mediaElement: mediaElement}"/>
+							</f:if>
+							<f:if condition="{mediaElement.originalResource.type} == 5">
+								<f:image class="news-content__large-img" image="{mediaElement}" title="{mediaElement.originalResource.title}" 
+								alt="{mediaElement.originalResource.alternative}" 
+								width="{settings.large.media.image.width}" height="{settings.large.media.image.height}"/>
+							</f:if>
+						</f:alias>
+					</n:link>
+				</f:then>
+				<f:else>
+					<f:if condition="{settings.displayDummyIfNoMedia}">
+						<span class="no-media-element">
+							<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+								<f:image class="news-content__large-img" src="{settings.list.media.dummyImage}" title="" alt="" 
+								width="{settings.large.media.image.width}" height="{settings.large.media.image.height}"/>
+							</n:link>
+						</span>
+					</f:if>
+				</f:else>
+			</f:if>
+	</f:if>
+	<h3><span itemprop="headline">{newsItem.title}</span></h3>
+	<div class="description" itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+
+	<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" class="news-content__more">
+		{f:translate(key: 'news.more', extensionName: 'nevafilm_site')}
+	</n:link>	
+
+	<div class="news-content__large_links">
+		<span class="date"><f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date></span><br />
+		<f:render partial="Category/HashTag" arguments="{_all}"/>
+	</div>
+	
+
+</html>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ru" datatype="plaintext" original="messages" date="2017-02-20T05:39:02Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="category.additional" approved="yes">
+			<source>Additional</source>
+			<target>Дополнительно</target>
+		</trans-unit>
+		<trans-unit id="category.class" approved="yes">
+			<source>Class</source>
+			<target>Класс для категории новостей</target>
+		</trans-unit>
+		<trans-unit id="content.departaments" approved="yes">
+			<source>Departaments</source>
+			<target>ОТДЕЛЫ</target>
+		</trans-unit>
+		<trans-unit id="flux.emotioncatalogpage" approved="yes">
+			<source>Emotioncatalog Page</source>
+			<target>Страница каталога фильмов</target>
+		</trans-unit>
+		<trans-unit id="flux.innerpage" approved="yes">
+			<source>Inner Page</source>
+			<target>Внутренняя страница</target>
+		</trans-unit>
+		<trans-unit id="flux.main" approved="yes">
+			<source>Main page</source>
+			<target>Главная страница</target>
+		</trans-unit>
+		<trans-unit id="flux.newslistpage" approved="yes">
+			<source>News Page</source>
+			<target>Страница новостей</target>
+		</trans-unit>
+		<trans-unit id="flux.servicepage" approved="yes">
+			<source>Service page</source>
+			<target>Страница без контейнера (div class=&quot;container&quot;)</target>
+		</trans-unit>
+		<trans-unit id="news.detail_news" approved="yes">
+			<source>Detail News</source>
+			<target>Новость целиком</target>
+		</trans-unit>
+		<trans-unit id="news.large_news" approved="yes">
+			<source>Large News on news page</source>
+			<target>Главная новость на странице новостей</target>
+		</trans-unit>
+		<trans-unit id="news.list_news" approved="yes">
+			<source>List News on news page</source>
+			<target>Список новостей на странице новостей</target>
+		</trans-unit>
+		<trans-unit id="news.list_news_departament" approved="yes">
+			<source>List news of departaments</source>
+			<target>Список новостей департаментов</target>
+		</trans-unit>
+		<trans-unit id="news.main_page_news" approved="yes">
+			<source>Main page news</source>
+			<target>Новости на главной</target>
+		</trans-unit>
+		<trans-unit id="news.more" approved="yes">
+			<source>More</source>
+			<target>Подробнее</target>
+		</trans-unit>
+		<trans-unit id="page.hide_breadcrumb" approved="yes">
+			<source>Hide Breadcrumb</source>
+			<target>Скрыть хлебные крошки</target>
+		</trans-unit>
+		<trans-unit id="page.show_departament_news" approved="yes">
+			<source>Show departament news in right column</source>
+			<target>Показывать новости департаментов в правой колонке</target>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

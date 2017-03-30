@@ -1,0 +1,29 @@
+<f:layout name="InnerPage" />
+<f:render partial="Header" arguments="{_all}" />	
+    <main>
+      <div class="container-fluid-default clearfix">
+        <div class="{page.picture_class}">
+          <div class="container">
+          	<f:render section="Left" />	
+          </div>
+        </div>
+      </div>
+      <f:cObject typoscriptObjectPath="lib.equipmentMenu" />
+      <div class="container">
+        <div class="flex-wrapper">
+          <div class="flex-item-content">
+          	<f:render section="Main" />
+          </div>
+          <div class="flex-item-four">
+            <f:if condition="{page.hide_aside_links} == 1">
+            	<f:then></f:then>
+            	<f:else>
+            		<f:cObject typoscriptObjectPath="lib.asideLinks" />
+            	</f:else>
+            </f:if>          
+						<f:render section="Right" />	
+          </div>
+        </div>
+      </div>
+    </main>
+<f:render partial="Footer" arguments="{_all}" />	

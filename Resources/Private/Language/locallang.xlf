@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-02-20T05:39:02Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="category.additional">
+			<source>Additional</source>
+		</trans-unit>
+		<trans-unit id="category.class">
+			<source>Class</source>
+		</trans-unit>
+		<trans-unit id="content.departaments">
+			<source>Departaments</source>
+		</trans-unit>
+		<trans-unit id="flux.emotioncatalogpage">
+			<source>Emotioncatalog Page</source>
+		</trans-unit>
+		<trans-unit id="flux.emotioncatalogpage.description">
+			<source>Emotioncatalog Page</source>
+		</trans-unit>
+		<trans-unit id="flux.innerpage">
+			<source>Inner Page</source>
+		</trans-unit>
+		<trans-unit id="flux.innerpage.description">
+			<source>Inner Page</source>
+		</trans-unit>
+		<trans-unit id="flux.left_area">
+			<source>Left Area</source>
+		</trans-unit>
+		<trans-unit id="flux.main">
+			<source>Main page</source>
+		</trans-unit>
+		<trans-unit id="flux.main.description">
+			<source>Main page</source>
+		</trans-unit>
+		<trans-unit id="flux.main_area">
+			<source>Main Area</source>
+		</trans-unit>
+		<trans-unit id="flux.newslistpage">
+			<source>News Page</source>
+		</trans-unit>
+		
+		<trans-unit id="flux.404page">
+			<source>Error 404 Page</source>
+		</trans-unit>		
+		
+		<trans-unit id="flux.right_area">
+			<source>Right Area</source>
+		</trans-unit>
+		<trans-unit id="flux.rightcolpage">
+			<source>Right Column Page</source>
+		</trans-unit>
+		<trans-unit id="flux.rightcolpage.description">
+			<source>Right Column Page</source>
+		</trans-unit>
+		<trans-unit id="flux.servicepage">
+			<source>Service page</source>
+		</trans-unit>
+		<trans-unit id="flux.top_area">
+			<source>Top Area</source>
+		</trans-unit>
+		<trans-unit id="news.detail_news">
+			<source>Detail News</source>
+		</trans-unit>
+		<trans-unit id="news.large_news">
+			<source>Large News on news page</source>
+		</trans-unit>
+		<trans-unit id="news.list_news">
+			<source>List News on news page</source>
+		</trans-unit>
+		<trans-unit id="news.list_news_departament">
+			<source>List news of departaments</source>
+		</trans-unit>
+		<trans-unit id="news.main_news_preview">
+			<source>Main news preview</source>
+		</trans-unit>
+		<trans-unit id="news.main_page_news">
+			<source>Main page news</source>
+		</trans-unit>
+		<trans-unit id="news.more">
+			<source>More</source>
+		</trans-unit>
+		<trans-unit id="page.hide_aside_links">
+			<source>Hide Aside Links</source>
+		</trans-unit>
+		<trans-unit id="page.hide_breadcrumb">
+			<source>Hide Breadcrumb</source>
+		</trans-unit>
+		<trans-unit id="page.hide_departament_news">
+			<source>Hide departament news in right column</source>
+		</trans-unit>
+		<trans-unit id="page.select.cinemas">
+			<source>Cinemas</source>
+		</trans-unit>
+		<trans-unit id="page.select.equipment_cinemas">
+			<source>Equipment Cinemas</source>
+		</trans-unit>
+		<trans-unit id="page.select.films_emotion">
+			<source>Films Emotion</source>
+		</trans-unit>
+		<trans-unit id="page.select.no_class">
+			<source>No Class</source>
+		</trans-unit>
+		<trans-unit id="page.select.research_cinema_market">
+			<source>Research Cinema Market</source>
+		</trans-unit>
+		<trans-unit id="page.select.research_library">
+			<source>Research Library</source>
+		</trans-unit>
+		<trans-unit id="page.select.research_marketing_research">
+			<source>Research Marketing Research</source>
+		</trans-unit>
+		<trans-unit id="page.select.research_premium_research">
+			<source>Research Premium Research</source>
+		</trans-unit>
+		<trans-unit id="page.select.research_reports">
+			<source>Research Reports</source>
+		</trans-unit>
+		<trans-unit id="page.show_departament_news">
+			<source>Show departament news in right column</source>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

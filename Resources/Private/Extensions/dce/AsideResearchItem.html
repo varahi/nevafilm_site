@@ -1,0 +1,46 @@
+{namespace dce=ArminVieweg\Dce\ViewHelpers}
+<f:layout name="Default" />
+<f:section name="main">
+
+	<div class="asideResearchItem">
+		<f:if condition="{field.link}">
+			<f:then>	
+				<f:link.page pageUid="{field.link}">
+					<f:if condition="{field.title}">
+						<h3 class="{field.titleClass}">{field.title}</h3>
+					</f:if>		
+					<f:if condition="{field.html}">
+						<f:format.raw>{field.html}</f:format.raw>
+					</f:if>			
+					<f:if condition="{field.image}">
+						<f:for each="{dce:fal(field:'image', contentObject:contentObject)}" as="fileReference" iteration="iterator">
+    					<f:if condition="{iterator.isFirst}">
+        				<f:image src="{fileReference.uid}" class="asideResearchItemImg" width="250" height="200" 
+        					alt="{field.title}" treatIdAsReference="1" />
+    					</f:if>
+						</f:for>			
+					</f:if>					
+				</f:link.page>
+			</f:then>
+			<f:else>
+					
+					<f:if condition="{field.title}">
+						<h3 class="{field.titleClass}">{field.title}</h3>
+					</f:if>	
+					<f:if condition="{field.html}">
+						<f:format.raw>{field.html}</f:format.raw>
+					</f:if>										
+					<f:if condition="{field.image}">
+						<f:for each="{dce:fal(field:'image', contentObject:contentObject)}" as="fileReference" iteration="iterator">
+    					<f:if condition="{iterator.isFirst}">
+        				<f:image alt="{field.title}" src="{fileReference.uid}" class="asideResearchItemImg" width="250" height="200" 
+        					treatIdAsReference="1" />
+    					</f:if>
+						</f:for>			
+					</f:if>	
+								
+			</f:else>
+		</f:if>
+  </div>
+
+</f:section>

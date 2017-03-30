@@ -1,0 +1,113 @@
+* {
+  margin: 0 auto;
+  padding: 0 auto;	
+}
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: auto;
+  font-family: 'Roboto', sans-serif;
+}
+.mobile-header {
+  display: block;
+  min-height: 60px;
+  padding: 10px;
+}
+.icon {
+  border-top: 5px #0f2245 solid;
+  border-bottom: 5px #0f2245 solid;
+  width: 46px;
+  height: 19px;
+  cursor: pointer;
+  float: right;
+  margin-top: 10px;
+}
+.icon::before {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  top: 47%;
+  left: 0px;
+  width: 100%;
+  border-top: 5px #0f2245 solid;
+  margin-top: 7px;
+}
+header img {
+  width: 40px;
+  height: 40px;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col-1 {
+  display: block;
+  margin: -7px;
+  height: auto;
+}
+.main-nav {
+	position: relative;
+}
+h2 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+}
+a {
+  position: absolute;
+  display: block;
+  padding-top: 50px;
+  width: 100%;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* ----------- iPad mini ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+   .mobile-header {width: 100%;}
+   .col-1 {width: 100%;}
+   a {width: 100%;}
+}
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media all and (max-width: 768px) { 
+  .mobile-header {width: 97%;}
+  .col-1 {width: 100%;}
+  a {width: 100%;}
+}
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media all 
+  and (max-width: 568px) {
+  .mobile-header {width: 96%;}
+  .col-1 {width: 100%;}
+  a {width: 100%;}
+  img {width: 98%;}
+}
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media all 
+  and (max-width: 480px) {
+  .mobile-header {width: 95%;}
+  .col-1 {width: 100%;}
+  a {width: 100%;}
+  img {width: 99%;}
+}

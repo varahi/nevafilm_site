@@ -1,0 +1,27 @@
+{namespace dce=ArminVieweg\Dce\ViewHelpers}
+<f:layout name="Default" />
+<f:section name="main">
+
+      <div class="map-contacts clearfix">
+        <div class="contacts-map-1">
+        	<f:format.raw>{field.map1}</f:format.raw>
+          <div class="contacts-map-info-1 contacts-map-info-neva">
+            <h3 class="contacts-map-info-title">{field.title1}</h3>
+            <p class="contacts-map-info-description">
+							<f:format.nl2br>{field.description1}</f:format.nl2br>
+             </p>
+          </div>
+        </div>
+
+        <div class="contacts-map-2">
+					<f:format.raw>{field.map2}</f:format.raw>
+          <div class="contacts-map-info-2 contacts-map-info-neva">
+            <h3 class="contacts-map-info-title">{field.title2}</h3>
+            <p class="contacts-map-info-description">
+								<f:format.nl2br>{field.description2}</f:format.nl2br>
+            </p>
+          </div>
+        </div>
+      </div>
+
+</f:section>
