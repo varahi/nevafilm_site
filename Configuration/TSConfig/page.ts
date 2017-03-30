@@ -143,3 +143,12 @@ tx_csseo {
     description = description
     }
 }
+
+TCEMAIN.table.tt_content {
+	disablePrependAtCopy = 1
+}
+
+#mod.SHARED {
+#      defaultLanguageFlag = gb
+#      defaultLanguageLabel = English
+#}
